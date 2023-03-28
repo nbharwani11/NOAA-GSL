@@ -10,3 +10,4 @@ def write(self, input_path, output_path):
     ''' Write an object to a file at the output_path provided'''
     with open(input_path) as nml_file:
         nml = f90nml.write(self, nml_file)
+
