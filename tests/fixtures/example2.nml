@@ -1,0 +1,6 @@
+&salad
+  fruit = 'papaya'
+  vegetable = 'tomato'
+  how_many = 17
+  dressing = 'caesar'
+/
