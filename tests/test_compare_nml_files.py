@@ -1,7 +1,5 @@
 import argparse
 import f90nml
-import os
-import pytest
 
 from src import compare_nml_files
 
@@ -13,6 +11,6 @@ def test_read_file(self):
     input_file = os.path.join(noaa_file_base, "fixtures/example.nml")
 
 def test_write_file(self):
-    '''Writes content of a file using the inout file path and output file path provided'''
+    '''Writes content of a file using the inout file path and output file path provided.'''
     pass
 
