@@ -1,8 +1,9 @@
 import argparse
+import f90nml
 import os
 import pytest
 
-from src  import compare_nml_files
+from src import compare_nml_files
 
 noaa_file_base = os.path.join(os.path.dirname(__file__))
 
