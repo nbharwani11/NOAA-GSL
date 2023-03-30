@@ -25,7 +25,8 @@ Clone the repository
 
 Once you have cloned the repository and have installed f90nml perform the following operations:
 
-```$ cd src
+```
+$ cd src
 $ python compare_nml_files.py insert_filepath_nml_1 insert_filepath_nml_2
 
 or
