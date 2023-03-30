@@ -30,10 +30,14 @@ Below are my sources that I used to complete the coding challenge
 
 - https://github.com/marshallward/f90nml
 - https://f90nml.readthedocs.io/en/latest/
-- https://sites.google.com/d/15vtUM7haPX6nL5rN4zhOPo09EKicChRp/p/1KYvC_hLJfQA7eFAipmJHamR5H14riQSX/edit
+- https://sites.google.com/colorado.edu/fall-2022-software-developer/home
 - https://realpython.com/pytest-python-testing/
 - https://www.tutorialsteacher.com/python/os-module#:~:text=The%20OS%20module%20in%20Python,with%20the%20underlying%20operating%20system.
 - https://docs.python.org/3/library/argparse.html#:~:text=The%20argparse%20module%20makes%20it,generates%20help%20and%20usage%20messages.
 - https://www.knowledgehut.com/blog/programming/self-variabe-python-examples
 - https://vim.rtorr.com/
--  
+- https://realpython.com/command-line-interfaces-python-argparse/
+- https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser
+- https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument
+- https://docs.python.org/3/library/argparse.html?highlight=argparse#argparse.ArgumentParser.parse_args
+- 
