@@ -24,7 +24,7 @@ def test_read_nml():
 
 
 def test_write_nml():
-    '''Writes content of a file using the inout file path and output file path provided.'''
+    '''Writes content of a file using the input file path and output file path provided.'''
     pass
 
 
