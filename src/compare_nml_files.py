@@ -21,14 +21,29 @@ def compare_nml(nml_file1, nml_file2):
     print()
     print()
 
-    new_dict = nml_file1.keys() | nml_file2.keys()
+    #print(set(nml_file1.keys()))
+    
     for item in nml_file1.keys() | nml_file2.keys():
         print(item, nml_file1[item], nml_file2[item])
+        #item_name = {item}
+        #print(item_name)
+        #print(nml_file1.get(item_name))
+
         for val in nml_file1[item]:
             print(val)
+    #diff = {'salad': {'vegetable' = 'eggplant'}, {'dressing' = 'ranch'}}
     return diff
 
 
+def output_diff(diff):
+    '''Outputs the differences between the two Fortran files on the command line.'''
+    print("Running script compare_nml_files.py with args:\n", f"{('-' * 80)}\n{('-' * 80)}")
+    for name, group_diff in diff.items():
+        print(f"Category:>15s {name}")
+        for key, (val1, val2) in group_diff.items():
+            print(f"Key: {key}\n")
+            print(f"Value 1: {val1}\n")
+            print(f"Value 2: {val2}\n")
 
 def main():
     '''Takes input from user of two Fortran namelist files.
@@ -47,7 +62,10 @@ def main():
     #print()
     #print(nml_file2)
     diff = compare_nml(nml_file1, nml_file2)
-    return diff
+    if diff == {}:
+        print("No differences found between the two Fortran files.")
+    else:
+        output_diff(diff)
 
 
 
