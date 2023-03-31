@@ -9,18 +9,25 @@ def read_nml(filepath):
         return nml
 
 
-def write_nml(input_path, output_path):
-    '''Write an object to a file at the output_path provided.'''
-    with open(input_path) as nml_file:
-        nml = f90nml.write(nml_file)
-        return nml
-
-
 def compare_nml(nml_file1, nml_file2):
     '''Takes in two namelist files. Parses each of the namelist files.
      Compare values of the namelist files. Will return the differences between the two files.'''
-    print(nml1_file1)
-    return #pass
+    
+    diff = {}
+    print(nml_file1.keys())
+    print(nml_file2.keys())
+    #print(nml_file1)
+    #print(nml_file2)
+    print()
+    print()
+
+    new_dict = nml_file1.keys() | nml_file2.keys()
+    for item in nml_file1.keys() | nml_file2.keys():
+        print(item, nml_file1[item], nml_file2[item])
+        for val in nml_file1[item]:
+            print(val)
+    return diff
+
 
 
 def main():
@@ -39,7 +46,8 @@ def main():
     #print(nml_file1)
     #print()
     #print(nml_file2)
-    return nml_file1
+    diff = compare_nml(nml_file1, nml_file2)
+    return diff
 
 
 
