@@ -3,8 +3,7 @@ import f90nml
 import os
 import importlib  
 
-NOAA_GSL = __import__("NOAA-GSL")
-from NOAA_GSL.src.compare_nml_files.py import read_nml
+#from src.compare_nml_files.py import read_nml
 noaa_file_base = os.path.join(os.path.dirname(__file__))
 
 
