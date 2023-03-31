@@ -23,14 +23,16 @@ def compare_nml(nml_file1, nml_file2):
 
     #print(set(nml_file1.keys()))
     
-    for item in nml_file1.keys() | nml_file2.keys():
-        print(item, nml_file1[item], nml_file2[item])
-        #item_name = {item}
-        #print(item_name)
-        #print(nml_file1.get(item_name))
+    for name in nml_file1.keys() | nml_file2.keys():
+        group_nml1 = nml_file1.get(name)
+        group_nml2 = nml_file2.get(name)
 
-        for val in nml_file1[item]:
-            print(val)
+        group_diff = {}
+        for key in nml_file1.keys() | nml_file2.keys():
+            if group_nml1.get(key) != group_nml2.get(key):
+                group_diff[key] = (group_nml1.get(key), group_nml2.get(key))
+        if group_diff:
+            diff[name] = group_diff
     #diff = {'salad': {'vegetable' = 'eggplant'}, {'dressing' = 'ranch'}}
     return diff
 
@@ -39,7 +41,7 @@ def output_diff(diff):
     '''Outputs the differences between the two Fortran files on the command line.'''
     print("Running script compare_nml_files.py with args:\n", f"{('-' * 80)}\n{('-' * 80)}")
     for name, group_diff in diff.items():
-        print(f"Category:>15s {name}")
+        print(f"Category: {name}")
         for key, (val1, val2) in group_diff.items():
             print(f"Key: {key}\n")
             print(f"Value 1: {val1}\n")
