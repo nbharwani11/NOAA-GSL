@@ -1,9 +1,10 @@
 import argparse
 import f90nml
 import os
+import importlib  
 
-from src import compare_nml_files
-
+NOAA_GSL = __import__("NOAA-GSL")
+from NOAA_GSL.src.compare_nml_files.py import read_nml
 noaa_file_base = os.path.join(os.path.dirname(__file__))
 
 
@@ -22,10 +23,6 @@ def test_read_nml():
 """
     assert result == outcome 
 
-
-def test_write_nml():
-    '''Writes content of a file using the input file path and output file path provided.'''
-    pass
 
 
 def test_compare_nml():
