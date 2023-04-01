@@ -12,13 +12,17 @@ The latest documentation for `f90nml` can be found at https://f90nml.readthedocs
 
 ### **Installation**
 
-```$ pip install f90nml```
+```
+$ pip install f90nml
+```
 
 ### **Set Up**
 
 Clone the repository
 
-```$ git clone https://github.com/nbharwani11/NOAA-GSL.git```
+```
+$ git clone https://github.com/nbharwani11/NOAA-GSL.git
+```
 
 
 ## **Executing the Code**
