@@ -14,26 +14,30 @@ def compare_nml(nml_file1, nml_file2):
      Compare values of the namelist files. Will return the differences between the two files.'''
     
     diff = {}
-    print(nml_file1.keys())
-    print(nml_file2.keys())
+    #print(nml_file1.keys())
+    #print(nml_file2.keys())
     #print(nml_file1)
     #print(nml_file2)
-    print()
-    print()
+    #print()
+    #print()
 
     #print(set(nml_file1.keys()))
     
     for name in nml_file1.keys() | nml_file2.keys():
         group_nml1 = nml_file1.get(name)
         group_nml2 = nml_file2.get(name)
+        #print("group nml 1 names: " + str(group_nml1))
+        #print("group nml 2 names: " + str(group_nml2))
 
         group_diff = {}
-        for key in nml_file1.keys() | nml_file2.keys():
+        for key in group_nml1.keys() | group_nml2.keys():
+            #print("Key in nml files: " + key)
             if group_nml1.get(key) != group_nml2.get(key):
+                #print("Key diff in nml between nml files: " + key)
                 group_diff[key] = (group_nml1.get(key), group_nml2.get(key))
-        if group_diff:
+        if group_diff != {}:
+            #print("Group Diff: " + str(group_diff))
             diff[name] = group_diff
-    #diff = {'salad': {'vegetable' = 'eggplant'}, {'dressing' = 'ranch'}}
     return diff
 
 
@@ -43,8 +47,8 @@ def output_diff(diff):
     for name, group_diff in diff.items():
         print(f"Category: {name}")
         for key, (val1, val2) in group_diff.items():
-            print(f"Key: {key}\n")
-            print(f"Value 1: {val1}\n")
+            print(f"Key: {key}")
+            print(f"Value 1: {val1}")
             print(f"Value 2: {val2}\n")
 
 def main():
